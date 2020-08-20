@@ -1,4 +1,4 @@
-let hoursCounter = 9;
+let hoursCounter = 16;
 let hourBlockElem;
 let timeBlockDisplay;
 let timeBlockCompare;
@@ -18,11 +18,11 @@ for (let i = 1; i < 9; i++) {
     $('#event' + i).val(localStorage.getItem('eventLog' + i));
 
     if (now.hour() < timeBlockCompare) {
-        $('#event' + i).attr('class', 'future');
+        $('#event' + i).attr('class', 'future col-sm-10');
     } else if (now.hour() >= timeBlockCompare && now.hour() < timeBlockPlusCompare) {
-        $('#event' + i).attr('class', 'present');
+        $('#event' + i).attr('class', 'present col-sm-10');
     } else if (now.hour() > timeBlockCompare) {
-        $('#event' + i).attr('class', 'past');
+        $('#event' + i).attr('class', 'past col-sm-10');
     }
 
     hoursCounter++;
@@ -32,6 +32,3 @@ for (let i = 1; i < 9; i++) {
         localStorage.setItem('eventLog' + i, input);
     });
 }
-
-
-
