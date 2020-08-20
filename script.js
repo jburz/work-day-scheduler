@@ -26,7 +26,7 @@ for (let i = 1; i < 9; i++) {
     } else if (now.hour() >= timeBlockCompare && now.hour() < timeBlockPlusCompare) {
         $('#event' + i).attr('class', 'present');
         console.log('Present');
-    } else if (now.hour() > timeBlockPlusCompare) {
+    } else if (now.hour() > timeBlockCompare) {
         $('#event' + i).attr('class', 'past');
         console.log('Past');
     }
