@@ -6,7 +6,6 @@ let timeBlockEndCompare;
 let eventLog;
 let input;
 let now = moment();
-let interval;
 
 $('#currentDay').text(now.format('dddd, MMMM Do'));
 
@@ -40,6 +39,7 @@ for (let i = 1; i < 17; i++) {
 
     hoursCounter++;
 
+    //event listener to save input in current 
     $('#saveBtn' + i).on('click', function (event) {
         input = $('#event' + i).val();
         localStorage.setItem('eventLog' + i, input);
